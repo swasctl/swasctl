@@ -20,6 +20,10 @@ I build backend systems and security tooling — network visibility platforms, p
   <img src="https://raw.githubusercontent.com/swasctl/swasctl/main/terminal.svg" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/swasctl/swasctl/main/network.svg" />
+</p>
+
 ---
 
 ### Languages
@@ -94,25 +98,4 @@ I build backend systems and security tooling — network visibility platforms, p
 ![BGP](https://img.shields.io/badge/BGP-262626?style=flat-square)
 ![QUIC](https://img.shields.io/badge/QUIC-262626?style=flat-square)
 
-</p>
-
----
-
-### Featured Projects
-
-| Project | Description | Stack |
-|---|---|---|
-| [nmapx](https://github.com/swasctl/nmapx) | Automated Nmap recon & vulnerability assessment framework | Lua |
-| [netintel](https://github.com/swasctl/netintel) | Network threat intelligence tooling | Python |
-| [sec-lens](https://github.com/swasctl/sec-lens) | Chrome extension auditing HTTP security headers in real-time — CSP, HSTS, CORS, SRI | JavaScript |
-| [PyC2](https://github.com/swasctl/PyC2) | Minimal HTTP + DNS C2 framework (educational) | Python |
-| [ntopng](https://github.com/swasctl/ntopng) | Fork — web-based traffic & security network monitoring | Lua / C++ |
-| [zeek](https://github.com/swasctl/zeek) | Fork — contributed QUIC PATH_CHALLENGE & PATH_RESPONSE telemetry support | C++ / Zeek |
-
----
-
-### Contributions
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/swasctl/swasctl/output/github-contribution-grid-snake-dark.svg" />
 </p>
