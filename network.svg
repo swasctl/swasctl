@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .node { fill: #161B22; stroke: #30363D; stroke-width: 1.5; }
+      .node-label { fill: #8B949E; font-family: 'Courier New', monospace; font-size: 10px; text-anchor: middle; }
+      .node-name { fill: #E6EDF3; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; text-anchor: middle; }
+      .link { stroke: #21262D; stroke-width: 1; fill: none; }
+      .link-active { stroke: #1F6FEB; stroke-width: 1.5; fill: none; opacity: 0.4; }
+      .alert-link { stroke: #F78166; stroke-width: 1.5; fill: none; opacity: 0.4; }
+      .title { fill: #8B949E; font-family: 'Courier New', monospace; font-size: 11px; }
+      .status { font-family: 'Courier New', monospace; font-size: 10px; }
+      .pulse-zeek { fill: none; stroke: #00D9FF; stroke-width: 1.5; animation: pulse 2s 0s infinite ease-out; }
+      .pulse-fw { fill: none; stroke: #3FB950; stroke-width: 1.5; animation: pulse 2.5s 0.8s infinite ease-out; }
+      .pulse-alert { fill: none; stroke: #F78166; stroke-width: 1.5; animation: pulse 1.5s 0s infinite ease-out; }
+      @keyframes pulse {
+        0% { r: 18; opacity: 0.8; }
+        100% { r: 28; opacity: 0; }
+      }
+      .log1 { animation: fadein 0.1s 1s both; }
+      .log2 { animation: fadein 0.1s 2.5s both; }
+      .log3 { animation: fadein 0.1s 4s both; }
+      @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+  </defs>
+  <rect width="700" height="280" rx="10" class="bg"/>
+  <text x="20" y="24" class="title">[ NDR Pipeline — Live Traffic Monitor ]</text>
+  <text x="580" y="24" class="title" fill="#3FB950">● ACTIVE</text>
+  <line x1="100" y1="140" x2="245" y2="140" class="link-active"/>
+  <line x1="245" y1="140" x2="375" y2="140" class="link-active"/>
+  <line x1="375" y1="140" x2="510" y2="80"  class="link-active"/>
+  <line x1="375" y1="140" x2="510" y2="200" class="link-active"/>
+  <line x1="375" y1="140" x2="615" y2="140" class="link-active"/>
+  <line x1="80"  y1="80"  x2="245" y2="130" class="alert-link"/>
+  <line x1="80"  y1="200" x2="245" y2="150" class="alert-link"/>
+  <circle cx="80"  cy="140" r="22" class="node"/>
+  <text x="80"  y="136" class="node-name">CLI</text>
+  <text x="80"  y="149" class="node-label">client</text>
+  <circle cx="50" cy="80"  r="8" fill="#F78166" opacity="0.7"/>
+  <circle cx="50" cy="200" r="8" fill="#F78166" opacity="0.5"/>
+  <text x="50" y="65"  class="node-label" fill="#F78166">threat</text>
+  <text x="50" y="218" class="node-label" fill="#F78166">threat</text>
+  <circle cx="245" cy="140" r="22" class="node"/>
+  <circle cx="245" cy="140" r="18" class="pulse-fw"/>
+  <text x="245" y="136" class="node-name">FW</text>
+  <text x="245" y="149" class="node-label">firewall</text>
+  <circle cx="375" cy="140" r="26" class="node" stroke="#00D9FF" stroke-width="2"/>
+  <circle cx="375" cy="140" r="22" class="pulse-zeek"/>
+  <text x="375" y="136" class="node-name" fill="#00D9FF">ZEEK</text>
+  <text x="375" y="150" class="node-label">sensor</text>
+  <circle cx="520" cy="80"  r="22" class="node"/>
+  <text x="520" y="76"  class="node-name">SRV1</text>
+  <text x="520" y="89"  class="node-label">:443</text>
+  <circle cx="520" cy="200" r="22" class="node"/>
+  <circle cx="520" cy="200" r="18" class="pulse-alert"/>
+  <text x="520" y="196" class="node-name" fill="#F78166">SRV2</text>
+  <text x="520" y="209" class="node-label">:8080</text>
+  <circle cx="620" cy="140" r="22" class="node"/>
+  <text x="620" y="136" class="node-name">LOG</text>
+  <text x="620" y="149" class="node-label">store</text>
+  <circle r="3" fill="#58A6FF"><animateMotion dur="3s" repeatCount="indefinite" begin="0.5s" path="M80,140 L245,140"/></circle>
+  <circle r="3" fill="#58A6FF"><animateMotion dur="2.5s" repeatCount="indefinite" begin="1.2s" path="M245,140 L375,140"/></circle>
+  <circle r="3" fill="#3FB950"><animateMotion dur="3.5s" repeatCount="indefinite" begin="0.8s" path="M375,140 L520,80"/></circle>
+  <circle r="3" fill="#3FB950"><animateMotion dur="2.8s" repeatCount="indefinite" begin="2.1s" path="M375,140 L520,200"/></circle>
+  <circle r="3" fill="#58A6FF"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.5s" path="M520,80 L375,140"/></circle>
+  <circle r="3" fill="#58A6FF"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.3s" path="M520,200 L375,140"/></circle>
+  <circle r="3" fill="#3FB950"><animateMotion dur="3.8s" repeatCount="indefinite" begin="1.0s" path="M375,140 L620,140"/></circle>
+  <circle r="4" fill="#F78166"><animateMotion dur="4s" repeatCount="indefinite" begin="0.6s" path="M50,80 L245,130"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="4s" repeatCount="indefinite" begin="0.6s"/></circle>
+  <circle r="4" fill="#F78166"><animateMotion dur="5s" repeatCount="indefinite" begin="2.5s" path="M50,200 L245,150"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.6;1" dur="5s" repeatCount="indefinite" begin="2.5s"/></circle>
+  <rect x="20" y="240" width="660" height="28" rx="4" fill="#161B22" stroke="#30363D" stroke-width="0.5"/>
+  <g class="log1"><text x="30" y="258" class="status" fill="#8B949E">12:47:03</text><text x="85" y="258" class="status" fill="#3FB950"> conn.log  847 flows</text></g>
+  <g class="log2"><text x="220" y="258" class="status" fill="#8B949E">12:47:05</text><text x="275" y="258" class="status" fill="#58A6FF"> dns.log   query *.onion</text></g>
+  <g class="log3"><text x="450" y="258" class="status" fill="#8B949E">12:47:08</text><text x="505" y="258" class="status" fill="#F78166"> ALERT     185.220.101.47</text></g>
+</svg>
